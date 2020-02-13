@@ -6,22 +6,36 @@ INFO
 
 */
 
+let mouseIsDown = false;
+$(document).mousedown(function() {
+	mouseIsDown = true;
+}).mouseup(function() {
+	mouseIsDown = false;  
+});
+
 $( ()=> {
 	$('#user-map').click( (evt)=> {
-		// select / deselect
+		handleMapClick(evt);
+	});
+
+	$('#user-map').mousemove( (evt)=> {
+		// dragging mouse
+		if(!mouseIsDown) return;
+
+		handleMapClick(evt);
+	});
+
+});
+
+function handleMapClick(evt) {
 		let clickX = evt.offsetX;
 		let clickY = evt.offsetY;
 
-		console.log(clickX, clickY);
-
-		let mapX = Math.floor(clickX/16)*16 ; // wtf help
+		let mapX = Math.floor(clickX/16)*16 ; // not working, scaled incorrectly
 		let mapY = Math.floor(clickY/16)*16  ;
 
-		console.log(mapX, mapY);
-
 		placeSprite(mapX, mapY);
-	});
-});
+}
 
 function placeSprite(mapX, mapY) {
 	if(selectedSprite[X] == -1) {
