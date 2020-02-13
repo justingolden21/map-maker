@@ -1,0 +1,25 @@
+::-moz-selection {
+	background: hsl(0, 0%, 90%) !important;
+}
+::selection {
+	background: hsl(0, 0%, 90%) !important;
+}
+* {
+	/*text-align: center;*/
+}
+canvas {
+	margin-top: 550px;
+	padding: 5px;
+	border: 2px solid #333;
+}
+
+#sprites-img, #sprite-select-display {
+	position: absolute;
+	left: 20px;
+	top: 80px;
+}
+
+#sprite-select-display {
+	border: 1px solid #333;
+	z-index: -1;
+}
