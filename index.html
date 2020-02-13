@@ -20,7 +20,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="styles.css">
-<script src="scripts.js"></script>
+<script src="spriteSelection.js"></script>
+<script src="spritePlacement.js"></script>
 
 </head>
 
@@ -29,10 +30,12 @@
 	<br>
 	<h3>Map Maker</h3>
 	<hr>
-	<canvas id="sprite-preview" width="16px" height="16px"></canvas>
+	<canvas id="hover-preview" width="32px" height="32px"></canvas>
+	<canvas id="select-preview" width="32px" height="32px"></canvas>
 	<img id="sprites-img" src="roguelikeSheet_transparent.png">
 	<div id="sprite-select-display"></div>
-	<canvas id="canvas"></canvas>
+	<br>
+	<canvas id="user-map"></canvas>
 	<br>
 	width:
 	<input id="width-input" type="number" value="20">
